@@ -1,0 +1,15 @@
+SUJET: dateSujet, hourSujet, nameSujet
+APPARTENIR, 0N SUJET, 11 MESSAGE
+MESSAGE: dateMessage, hourMessage, content,
+ECRIRE, 0N UTILISATEUR, 11 MESSAGE
+UTILISATEUR: nameUser, surnameUser, pseudo, dob, mail, tel, avatar, pass
+
+
+
+
+
+ANIME: nameAnime, nameAuteur, typeAnime, genreAnime, descriptionAnime, markAnime
+AVOIR, 11 SEASON, 1N ANIME
+SEASON: nameSeason, storyArc, descriptionArc
+CONTENIR, 11 EPISODE, 1N SEASON
+EPISODE: numberEpisode, nameEpisode, tempsEpisode, descriptionEpisode, markEpisode
