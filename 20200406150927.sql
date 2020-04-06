@@ -3,6 +3,7 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
 --
 -- Base de données :  `site anime`
 --
@@ -10,6 +11,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+
+-- Structure de la table `utilisateur`
+--
+
+CREATE TABLE IF NOT EXISTS `utilisateur` (
+    `name_user` varchar(500) NOT NULL,
+    `surname_user` varchar(500) NOT NULL,
+    `pseudo` varchar(50) NOT NULL,
+    `date_of_birth` int(8) NOT NULL,
+    `mail` varchar(50) NOT NULL,
+    `tel` int(10) NOT NULL,
+    `avatar`  varchar(500) NOT NULL,
+    `pass` varchar(30) NOT NULL,
+    id int(5) NOT NULL,
+    PRIMARY KEY (id),
+  )ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+
 -- Structure de la table `episode`
 --
 
@@ -47,11 +70,45 @@ CREATE TABLE IF NOT EXISTS `season` (
 -- Déchargement des données de la table `aliment_recette`
 --
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `message`
+--  
+  
+  
+  CREATE TABLE IF NOT EXISTS `message` (
+    `date_message` int(8) NOT NULL,
+    `hour_message` int(6) NOT NULL,
+    `content` int(5) NOT NULL,
+    id int(5) NOT NULL,
+    PRIMARY KEY (id),
+  ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  
+
+--
+-- Déchargement des données de la table `message`
+--
 
 
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `sujet`
+--
+  
+  CREATE TABLE IF NOT EXISTS `sujet` (
+    `date_sujet` int(8) NOT NULL,
+    `hour_sujet` int(6) NOT NULL,
+    `name_sujet` varchar(30) NOT NULL,
+    id int(5) NOT NULL,
+    PRIMARY KEY (id),
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `sujet`
+--
+
 -- Structure de la table `anime`
 --
 
@@ -110,4 +167,3 @@ COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
