@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face
+{
+    font-family: Comfortaa;
+    src: url("http://localhost/loisirs/fan-dub/police/Comfortaa.ttf");
+}
+
+body {
+    font-family: "Comfortaa";
+}
+/*Toute la zone*/
+.flex{
+    display: flex;
+    align-items: center;
+    /*border: 5px solid red;*/
+    height: 100vh;
+}
+
+.flex2{
+    display: none;
+}
+
+/*Zone de gauche (image de gauche)*/
+.left{
+    justify-content: left;
+    background: url("http://localhost/projet2/mspr/img/gauche.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 0 1 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.left h1, .left p{
+    color: #ffffff;
+    text-align: center;
+    margin: 30px;
+}
+
+.left h1{
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.left h1 img{
+    width: 300px;
+}
+
+.left p{
+    font-size: 40px;
+    opacity: 0.8;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: none;
+}
+/*Zone de droite (image de droite)*/
+.right{
+    justify-content: right;
+    flex: 0 1 65%;
+}
+
+.right h1{
+    text-align: center;;
+}
+
+
+/*Formulaire*/
+input[type=text], input[type=password], input[type=tel], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 26px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  float: center;
+}
+
+.button p{
+    text-align: right;
+}
+
+p button{
+    text-align: center;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+  
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+  
+.container {
+    padding: 16px;
+}
+  
+span.psw {
+    float: right;
+    font-size: 10px;
+}
+  
+span.psw a{
+    color: #000;
+    text-decoration: none;
+}
+  
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 0% auto 5% auto; /* 0% from the top, 5% from the bottom and centered */
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+/*Zone de bas (image de bas)*/
+.low{
+    justify-content: left;
+    background: url("http://localhost/projet2/mspr/img/bas2.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 0 1 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    display: none
+}
+
+.low h1, .low p{
+    color: #ffffff;
+    text-align: center;
+    margin: 30px;
+}
+
+.low h1{
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.low h1 img{
+    width: 300px;
+}
+
+.low p{
+    font-size: 40px;
+    opacity: 0.8;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: none;
+}
+
+@media (max-width: 850px) {
+
+    .flex {
+        display: none;
+    }
+    .flex2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 50px;
+    }
+    .up{
+        justify-content: center;
+        display: block;
+    }
+
+    .up h1{
+        text-align: center;
+    }
+    .button p{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .low{
+        display: block;
+        height: 100vh;
+        flex: none;
+    }
+
+    .low h1 img{
+        width: 250px;
+    }
+    
+    .low p{
+        font-size: 32px;
+        opacity: 0.8;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-weight: none;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .low{
+        height: 120vh;
+        display: block;
+        flex: none;
+        background: url("http://localhost/projet2/mspr/img/bas3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .low{
+        height: 120vh;
+        display: block;
+        flex: none;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .low{
+        height: 70vh;
+        display: block;
+        flex: none;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .low{
+        height: 90vh;
+        display: block;
+        flex: none;
+    }
+}
