@@ -2,11 +2,6 @@ Copyright (C) Microsoft Corporation. Tous droits réservés.
 
 Testez le nouveau système multiplateforme PowerShell https://aka.ms/pscore6
 
-PS D:\wamp64\www\msprphpb2\mspr> git git checkout master
-git: 'git' is not a git command. See 'git --help'.
-
-The most similar command is
-        init
 PS D:\wamp64\www\msprphpb2\mspr> git checkout master
 Already on 'master'
 Your branch is up to date with 'origin/master'.
