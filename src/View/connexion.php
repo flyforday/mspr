@@ -4,20 +4,18 @@
       <title>Se connecter</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/connexion2.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/mspr/public/css/connexion.css">
     </head>
 <body>
 
     <div class="flex">
         <div class="left">
-            <h1 class="title"><img src="img/myastk.png" alt="logo"></h1>
-            
-            <p class="subtitle">All Asteriks in a single point, your applications, your management... all that in found here</p>
+
     </div>
 
 
     <div class="right">
-        <h1>Connexion</h1>
+        <h1>Vous connecter</h1>
         
         <div id="id01" class="modal">
           
@@ -26,19 +24,19 @@
             </div>
         
             <div class="container">
-              <label for="uname"><b>Username</b></label>
+              <label for="uname"><b>Votre pseudo</b></label>
               <input type="text" placeholder="" name="uname" required>
         
-              <label for="psw"><b>Password <span class="psw"><a href="#">Forgot password?</a></span></b></label>
+              <label for="psw"><b>Mot de passe <span class="psw"><a href="#">Mot de passe oublié?</a></span></b></label>
               
               <input type="password" placeholder="" name="psw" required>
               <div class="link">
                 <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                  <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi?
                 </label>
               </div>
               <div class="button">
-              <p><button type="submit">Connect</button></p>
+              <p><button type="submit" name= "csend">Se connecter</button></p>
                 </div>
         </div>
           </form>
@@ -48,7 +46,7 @@
 
 <div class="flex2">
     <div class="up">
-      <h1>Connexion</h1>
+      <h1>Vous connecter</h1>
         
       <div id="id01" class="modal">
         
@@ -57,28 +55,27 @@
           </div>
       
           <div class="container">
-            <label for="uname"><b>Username</b></label>
+            <label for="uname"><b>Votre pseudo</b></label>
             <input type="text" placeholder="" name="uname" required>
       
-            <label for="psw"><b>Password <span class="psw"><a href="#">Forgot password?</a></span></b></label>
+            <label for="psw"><b>Mot de passe<span class="psw"><a href="#">Mot de passe oublié?</a></span></b></label>
             
             <input type="password" placeholder="" name="psw" required>
             <div class="link">
               <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
+                <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi?
               </label>
             </div>
             <div class="button">
-            <p><button type="submit">Connect</button></p>
+            <p><button type="submit" name= "csend">Se connecter</button></p>
               </div>
       </div>
         </form>
     </div>
   </div>
         <div class="low">
-            <h1 class="title"><img src="img/myastk.png" alt="logo"></h1>
             
-            <p class="subtitle">All Asteriks in a single point, your applications, your management... all that in found here</p>
+            
         </div>
       </div>
         </body>
