@@ -1,11 +1,11 @@
 <?php
-require "../connexion.php";
+require_once "src\connexion.php";
 
 /*$sql = file_get_contents('fixtures.sql');*/
 
 
 
-$sql = file_get_contents('fixtures.sql');
+$sql = file_get_contents('src\Fixture\fixtures_anime.sql');
 
 try {
     $dbh->beginTransaction();
