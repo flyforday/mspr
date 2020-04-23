@@ -1,0 +1,231 @@
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+Testez le nouveau système multiplateforme PowerShell https://aka.ms/pscore6
+
+PS D:\wamp64\www\msprphpb2\mspr> git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+PS D:\wamp64\www\msprphpb2\mspr> git merge origin/leo
+ src/Controller/test.txt | 0
+ src/View/test.txt       | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/Controller/test.txt
+ create mode 100644 src/Model/test.txt
+ create mode 100644 src/View/test.txt
+PS D:\wamp64\www\msprphpb2\mspr> git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        20200406150927.sql
+        connexion.php
+        fixtures.php
+        fixtures.sql
+        index.php
+        migration20200406150927.php
+        migrations-versions.txt
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\wamp64\www\msprphpb2\mspr> git checkout leo
+Switched to branch 'leo'
+PS D:\wamp64\www\msprphpb2\mspr> git pull
+remote: Enumerating objects: 46, done.
+remote: Counting objects: 100% (46/46), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 37 (delta 11), reused 9 (delta 2), pack-reused 0
+Unpacking objects: 100% (37/37), 595.86 KiB | 281.00 KiB/s, done.
+   17ac885..2d49c1b  leo        -> origin/leo
+   3824361..f6f8d7a  master     -> origin/master
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> leo
+
+PS D:\wamp64\www\msprphpb2\mspr> git branch --set-upstream-to=origin/<branch> leo
+hint: 
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint: 
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+PS D:\wamp64\www\msprphpb2\mspr> git branch --set-upstream-to=origin/leo leo
+Branch 'leo' set up to track remote branch 'leo' from 'origin'.
+PS D:\wamp64\www\msprphpb2\mspr> git pull
+fatal: unable to access 'https://github.com/flyforday/mspr.git/': OpenSSL SSL_connect: Connec
+PS D:\wamp64\www\msprphpb2\mspr> git pull
+error: The following untracked working tree files would be overwritten by merge:
+        20200406150927.sql
+        connexion.php
+        fixtures.php
+        index.php
+        migration20200406150927.php
+        migrations-versions.txt
+Please move or remove them before you merge.
+Aborting
+Updating 17ac885..2d49c1b
+PS D:\wamp64\www\msprphpb2\mspr> git pull
+Updating 17ac885..2d49c1b
+Fast-forward
+ 20200406150927.sql            | 169 ++++++++++++++++++++++++++++++++++++++++++
+ connexion.php                 |   6 ++
+ fixtures.php                  |  46 ++++++++++++
+ index.php                     |  23 ++++++
+ migration20200406150927.php   |   9 +++
+ migrations-versions.txt       |   1 +
+ public/css/test.txt           |   0
+ public/img/test.txt           |   0
+ public/js/test.txt            |   0
+ src/model/test.txt            |   0
+ src/view/test.txt             |   0
+ video/beastars/Beastars.jpg   | Bin 0 -> 49498 bytes
+ video/beastars/beastars.jpg   | Bin 0 -> 105882 bytes
+ video/one piece/one pice.jpg  | Bin 0 -> 21893 bytes
+ video/one piece/one piece.jpg | Bin 0 -> 495201 bytes
+ 16 files changed, 254 insertions(+)
+ create mode 100644 20200406150927.sql
+ create mode 100644 connexion.php
+ create mode 100644 fixtures.php
+ create mode 100644 index.php
+ create mode 100644 migration20200406150927.php
+ create mode 100644 migrations-versions.txt
+ create mode 100644 public/css/test.txt
+ create mode 100644 public/img/test.txt
+ create mode 100644 public/js/test.txt
+ create mode 100644 src/controller/test.txt
+ create mode 100644 src/model/test.txt
+ create mode 100644 src/view/test.txt
+ create mode 100644 video/beastars/Beastars.jpg
+ create mode 100644 video/beastars/beastars.jpg
+ create mode 100644 video/one piece/one pice.jpg
+ create mode 100644 video/one piece/one piece.jpg
+PS D:\wamp64\www\msprphpb2\mspr> git diff
+diff --git a/20200406150927.sql b/20200406150927.sql
+index 7a28162..0a6effc 100644
+--- a/20200406150927.sql
++++ b/20200406150927.sql
+@@ -3,7 +3,6 @@ SET AUTOCOMMIT = 0;
+ START TRANSACTION;
+ SET time_zone = "+00:00";
+ 
+-
+ --
+ -- Base de données :  `site anime`
+ --
+@@ -11,28 +10,6 @@ SET time_zone = "+00:00";
+ -- --------------------------------------------------------
+
+ --
+-
+--- Structure de la table `utilisateur`
+---
+-
+-CREATE TABLE IF NOT EXISTS `utilisateur` (
+-    `name_user` varchar(500) NOT NULL,
+-    `surname_user` varchar(500) NOT NULL,
+-    `pseudo` varchar(50) NOT NULL,
+-    `date_of_birth` int(8) NOT NULL,
+-    `mail` varchar(50) NOT NULL,
+-    `tel` int(10) NOT NULL,
+-    `avatar`  varchar(500) NOT NULL,
+-    `pass` varchar(30) NOT NULL,
+-    id int(5) NOT NULL,
+-    PRIMARY KEY (id),
+-  )ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+-  
+---
+--- Déchargement des données de la table `utilisateur`
+---
+-
+-
+ -- Structure de la table `episode`
+ --
+
+@@ -70,45 +47,11 @@ CREATE TABLE IF NOT EXISTS `season` (
+ -- Déchargement des données de la table `aliment_recette`
+ --
+
+--- --------------------------------------------------------
+-
+---
+--- Structure de la table `message`
+---  
+-  
+-  
+-  CREATE TABLE IF NOT EXISTS `message` (
+-    `date_message` int(8) NOT NULL,
+-    `hour_message` int(6) NOT NULL,
+-    `content` int(5) NOT NULL,
+-    id int(5) NOT NULL,
+-    PRIMARY KEY (id),
+-  ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+-  
+-
+---
+--- Déchargement des données de la table `message`
+---
+
+ 
+ -- --------------------------------------------------------
+
+ --
+--- Structure de la table `sujet`
+---
+-  CREATE TABLE IF NOT EXISTS `sujet` (
+-    `date_sujet` int(8) NOT NULL,
+-    `hour_sujet` int(6) NOT NULL,
+-    `name_sujet` varchar(30) NOT NULL,
+-    id int(5) NOT NULL,
+-    PRIMARY KEY (id),
+-  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-
+---
+--- Déchargement des données de la table `sujet`
+---
+-
+ -- Structure de la table `anime`
+ --
+
+ /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+ /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+diff --git a/video/beastars/Beastars.jpg b/video/beastars/Beastars.jpg
+index 66e5c08..87ea21b 100644
+Binary files a/video/beastars/Beastars.jpg and b/video/beastars/Beastars.jpg differ
+PS D:\wamp64\www\msprphpb2\mspr> git status
+On branch leo
+Your branch is up to date with 'origin/leo'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   20200406150927.sql
+        modified:   video/beastars/Beastars.jpg
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\wamp64\www\msprphpb2\mspr> git restore 20200406150927.sql
+PS D:\wamp64\www\msprphpb2\mspr> git diff
+diff --git a/video/beastars/Beastars.jpg b/video/beastars/Beastars.jpg
+index 66e5c08..87ea21b 100644
+Binary files a/video/beastars/Beastars.jpg and b/video/beastars/Beastars.jpg differ
+PS D:\wamp64\www\msprphpb2\mspr> git status
+                                                                                 On branch leo
+Your branch is up to date with 'origin/leo'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   video/beastars/Beastars.jpg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fixtures.sql
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\wamp64\www\msprphpb2\mspr>
