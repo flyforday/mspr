@@ -1,0 +1,350 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+@font-face
+{
+    font-family: Comfortaa;
+    src: url("http://localhost/mspr/public/police/Comfortaa.ttf");
+}
+
+
+
+body {
+  font-family: "Comfortaa";
+}
+
+/*Ecran de dessus pour chaque anime*/
+.screenbeastars, .screendemonslayer, .screenonpiece{
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+
+
+.screenbeastars{
+    background: url("http://localhost/mspr/public/img/presentation/beastars-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.screendemonslayer{
+  background: url("http://localhost/mspr/public/img/presentation/demon-slayer-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.screenonpiece{
+  background: url("http://localhost/mspr/public/img/presentation/one-piece-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.screenbeastars p, .screendemonslayer p, .screenonpiece p{
+    text-align: center;
+}
+
+
+.screenbeastars img, .screendemonslayer img, .screenonpiece img{
+  width: 50%;
+}
+
+/*Les poster et textes*/
+
+.poster{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+.poster img{
+  width: 70%;
+}
+
+
+.left {
+  justify-content: right;
+  flex: 0 1 35%;
+  margin-top: 7px;
+}
+
+
+
+.right {
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 50%;
+  margin-top: 7px;
+}
+
+
+.right p{
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+
+
+.syno p{
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+
+
+.button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+
+/*Les images en dessous*/
+
+.videobeastars{
+  background: url("http://localhost/mspr/public/img/presentation/beastars-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.videodemonslayer{
+  background: url("http://localhost/mspr/public/img/presentation/demon-slayer-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.videodeoonepiece{
+  background: url("http://localhost/mspr/public/img/presentation/one-piece-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.videobeastars, .videodemonslayer, .videodeoonepiece{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+.videobeastars h1, .videodemonslayer h1, .videodeoonepiece h1{
+  padding: 40px;
+  color: white;
+}
+
+
+
+.videobeastars a, .videodemonslayer a, .videodeoonepiece a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.play iframe{
+  width:400px;
+  height:225px;
+}
+
+
+.play{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+
+.trailer, .open {
+  justify-content: center;
+  text-align: center;
+  margin-top: 7px;
+  color: white;
+}
+
+
+/*En dessous de 850px*/
+@media (max-width: 850px) {
+
+.screenbeastars{
+  background: url("http://localhost/mspr/public/img/presentation/beastars-1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.screendemonslayer{
+  background: url("http://localhost/mspr/public/img/presentation/demon-slayer-1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.screenonpiece{
+  background: url("http://localhost/mspr/public/img/presentation/one-piece-1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.poster{
+  display: block;
+  text-align: center;
+}
+
+.poster img{
+  width: 30%;
+}
+
+
+.right{
+  margin-bottom: 20px;
+}
+
+.right p{
+  font-size: 13px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+
+.syno p{
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+
+.forum p{
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+.videobeastars{
+  background: url("http://localhost/mspr/public/img/presentation/beastars-2-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.videodemonslayer{
+  background: url("http://localhost/mspr/public/img/presentation/demon-slayer-2-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.videodeoonepiece{
+  background: url("http://localhost/mspr/public/img/presentation/one-piece-2-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.play{
+  display: block;
+}
+
+.trailer{
+  margin-bottom: 50px;
+}
+
+
+}
+
+
+/*En dessous de 460px*/
+
+@media (max-width: 460px) {
+
+.screenbeastars{
+  background: url("http://localhost/mspr/public/img/presentation/beastars-1-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.screendemonslayer{
+  background: url("http://localhost/mspr/public/img/presentation/demon-slayer-1-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.screenonpiece{
+  background: url("http://localhost/mspr/public/img/presentation/one-piece-1-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.play iframe{
+  width:320px;
+  height:180px;
+}
+
+
+.videobeastars{
+  background: url("http://localhost/mspr/public/img/presentation/beastars-2-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.videodemonslayer{
+  background: url("http://localhost/mspr/public/img/presentation/demon-slayer-2-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.videodeoonepiece{
+  background: url("http://localhost/mspr/public/img/presentation/one-piece-2-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.videobeastars h1, .videodemonslayer h1, .videodeoonepiece h1{
+  font-size: 30px;
+  padding: 20px;
+}
+
+
+    
+.videobeastars a, .videodemonslayer a, .videodeoonepiece a {
+  font-size: 20px;
+  color: white;
+}
+
+
+.trailer p, .open p{
+  font-size: 18px;
+}
+
+
+}

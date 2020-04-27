@@ -1,0 +1,167 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+@font-face
+{
+    font-family: Comfortaa;
+    src: url("http://localhost/mspr/public/police/Comfortaa.ttf");
+}
+
+
+
+body {
+  font-family: "Comfortaa";
+}
+
+
+
+.anime{
+  margin: 40px;
+}
+
+
+.anime h1{
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+.poster{
+  display: flex;
+  justify-content: space-around;
+  height: 80vh;
+  align-items: center;
+}
+
+
+
+.left {
+  justify-content: center;
+  flex: 0 1 25%;
+  margin-top: 7px;
+}
+
+.center {
+  justify-content: center;
+  flex: 0 1 25%;
+  margin-top: 7px;
+}
+
+.right {
+  justify-content: center;
+  flex: 0 1 25%;
+  margin-top: 7px;
+}
+.left img, .center img, .right img{
+  width: 100%;
+}
+.poster p{
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+} 
+
+.poster a{
+  text-decoration: none;
+  color: black;
+} 
+
+.poster a:hover{
+  text-decoration: underline;
+} 
+
+.regist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("http://localhost/mspr/public/img/register/phone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.registtitle{
+  font-size: 28px;
+}
+
+.registdescription{
+  font-size: 14px;
+}
+
+.registbutton button {
+  background-color: #CA0000;
+  color: white;
+  padding: 10px 26px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  float: center;
+}
+
+.registbutton button p{
+    text-align: right;
+}
+.registbutton button a{
+  color: white;
+  text-decoration: none;
+}
+.registbutton p button{
+    text-align: center;
+}
+
+.registbutton button:hover {
+    opacity: 0.8;
+}
+
+.registtitle, .registdescription, .registbutton button{
+  margin: 20px;
+}
+
+@media (max-width: 1127px) {
+  .anime{
+    margin: 10px;
+  }
+}
+
+@media (max-width: 977px) {
+  .anime{
+    margin: 0px;
+  }
+
+  .poster {
+    height: 70vh;
+}
+}
+
+@media (max-width: 767px) {
+
+  .poster {
+    height: 50vh;
+}
+}
+
+@media (max-width: 672px) {
+
+  .poster {
+    display: initial;
+}
+
+.left img, .center img, .right img{
+  width: 50%;
+}
+
+.left, .center, .right{
+  margin-bottom: 50px;
+}
+
+}
