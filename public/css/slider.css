@@ -1,0 +1,118 @@
+* {
+	box-sizing: border-box;
+}
+
+
+@font-face
+{
+    font-family: Comfortaa;
+    src: url("http://localhost/mspr/public/police/Comfortaa.ttf");
+}
+
+
+@font-face
+{
+    font-family: Japanese;
+    src: url("http://localhost/mspr/public/police/Japanese.ttf");
+}
+
+
+
+body {
+	font-family: 'Comfortaa';
+	margin: 0;
+}
+
+
+.slider-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	font-family: 'Japanese';
+}
+
+
+.slider-container h1 {
+	color: #fff;
+	font-size: 100px;
+	letter-spacing: 5px;
+	position: relative;
+	z-index: 100;
+	text-align: center;
+}
+
+
+.slider-container::after {
+	background-color: #000;
+	content: '';
+	position: absolute;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+
+.slider-container 2{
+	display: none;
+}
+
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	transform: scale(1.15);
+	transition: opacity .6s ease;
+}
+
+
+.slide.active {
+	animation: grow 6s linear forwards;
+	opacity: 1;
+}
+
+
+.tablet{
+	display: none;;
+}
+
+
+@keyframes grow {
+
+
+	0%, 20% {
+		transform: scale(1);
+	}
+	
+	75%, 100% {
+		transform: scale(1.15);
+	}
+}
+
+
+
+
+
+.controls-container {
+	display: none;
+}
+
+/*En dessous de 767px*/
+@media (max-width: 767px) {
+.slider-container h1 {
+	font-size: 70px;
+}
+}

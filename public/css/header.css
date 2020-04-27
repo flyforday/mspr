@@ -1,0 +1,487 @@
+@font-face
+{
+  font-family: Comfortaa;
+  src: url("http://localhost/mspr/public/police/Comfortaa.ttf");
+}
+
+
+
+body {
+  margin: 0;
+  font-family: "Comfortaa";
+  background-color: #fff;
+}
+
+
+
+a {
+  color: #000;
+}
+
+
+/*Mode portable*/
+
+
+.menu li> a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.menu li> a:hover {
+  color: #fff;
+}
+
+
+
+.menu li> a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+ }
+
+
+
+.menu li> a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
+
+/* header */
+
+.header {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  width: 100%;
+  position: relative;
+  z-index: 300;
+}
+
+
+
+.header img{
+  margin: 13px;
+  width: 10%;
+  margin-top: 22px;
+  margin-left: 35px;
+}
+
+
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+  text-align: center;
+}
+
+.header li a {
+  padding: 20px 20px;
+  border-right: 0px solid #f4f4f4;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.header .logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+
+
+.menu-icon{
+    margin-top: 10px;
+}
+
+
+.header .menu-icon .navicon::before, .header .menu-icon .navicon::after {
+    background: #fff;
+}
+
+
+.header .menu-icon .navicon {
+    background: #fff;
+}
+
+
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 40px 30px;
+  position: relative;
+  user-select: none;
+}
+
+
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 36px;
+}
+
+
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+
+
+.header .menu-icon .navicon:before {
+  top: 15px;
+}
+
+
+
+.header .menu-icon .navicon:after {
+  top: -15px;
+}
+
+
+
+/* menu btn */
+
+
+.header .menu-btn {
+  display: none;
+}
+
+
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 350px;
+}
+
+
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+
+
+
+/*Mode ordinateur*/
+
+
+.topnav {
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background-color: none;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    justify-content: none;
+    flex: 0 1 100%;
+    margin-top: 20px;
+  }
+  
+  .topnav p{
+    text-align: center;
+  }
+  
+  
+  
+  .topnav p > a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  
+  
+  .topnav p > a:hover {
+    color: #ffffff;
+  }
+  
+  
+  
+  
+  .topnav p > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
+  
+  
+  
+  
+  .logo{
+    flex: 0 1 10%;
+    justify-content: center;
+  }
+  
+  
+  .logo p{
+    text-align: center;
+  }
+  
+  
+  .logo img{
+    width: 30%;
+  }
+  
+  
+  
+  
+  
+  
+  .linkconnexion{
+    flex: 0 1 45%;
+  }
+  .linkconnexion p{
+    text-align: left;
+  }
+  
+  
+  
+  .linkanime{
+    flex: 0 1 45%;
+    justify-content: right;
+  }
+  
+  .linkanime p{
+    text-align: right;
+  }
+  
+  
+  .linkanime a, .linkconnexion a {
+    margin: 5px 20px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  
+  .linkanime p > a:before, .linkconnexion p > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, red,  white);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* En dessous de 780px */
+
+@media (min-width: 780px) {
+
+.header{ 
+  display: none;
+}
+
+.header li {
+  float: left;
+}
+
+
+.header li a {
+  padding: 20px 30px;
+}
+
+
+.header .menu {
+  clear: none;
+  float: right;
+  max-height: none;
+}
+
+
+.header .menu-icon {
+  display: none;
+}
+
+
+}
+
+
+
+
+/*Responsif mode portable*/
+
+/*En dessous de 779px*/
+
+
+@media (min-width: 779px) {
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 38px 30px;
+  position: relative;
+  user-select: none;
+
+}
+
+/*En dessous de 700px*/
+@media (min-width: 700px) {
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 38px 30px;
+  position: relative;
+  user-select: none;
+
+}
+
+
+}
+
+
+/*En dessous de 680px*/
+@media (min-width: 680px) {
+
+.header .menu-icon {
+  padding: 27px 30px;
+}
+
+}
+
+
+
+  
+  
+/*Responsif mode ordinateur*/
+
+
+
+  
+  /*A partir de 1040 pixels*/
+  @media only screen and (max-width: 1040px) {
+  
+  .linkanime a, .linkconnexion a {
+    font-size: 12px;
+  }
+  
+  
+  }
+  
+  
+  /*A partir de 892 pixels*/
+  @media only screen and (max-width: 892px) {
+  .linkanime a, .linkconnexion a {
+    font-size: 9px;
+  }
+  
+  }
+  
+  
+  
+  /*A partir de 779 pixels*/
+  @media only screen and (max-width: 779px) {
+  .topnav{
+    display: none;
+  }
+  
+  
+  }
