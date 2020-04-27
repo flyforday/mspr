@@ -1,0 +1,207 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+@font-face
+{
+    font-family: Comfortaa;
+    src: url("http://localhost/mspr/public/police/Comfortaa.ttf");
+}
+
+@font-face
+{
+    font-family: Japanese;
+    src: url("http://localhost/mspr/public/police/Japanese.ttf");
+}
+
+
+
+
+body {
+  font-family: "Comfortaa";
+}
+
+
+
+/*Image de fond au dessus*/
+
+.computer{
+    background: url("http://localhost/mspr/public/img/forums/computer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+
+.computer h1{
+    color: #ffffff;
+    font-family: Japanese;
+    font-size: 65px;
+    text-align: center;
+}
+
+
+
+
+/*Classe anime*/
+
+.anime{
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*Les 3 posters*/
+.poster{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.poster img{
+  width: 100%;
+}
+
+
+.poster img:hover{
+    opacity:0.8;
+    -moz-transition: opacity 0.7s;
+    -webkit-transition: opacity 0.7s;
+    -o-transition: opacity 0.7s;
+}
+
+
+.poster p{
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 28px;
+} 
+
+.poster a{
+  text-decoration: none;
+} 
+
+
+.poster a:hover{
+  text-decoration: underline;
+} 
+
+
+/*One Piece*/
+.left {
+  justify-content: center;
+  flex: 0 1 30%;
+  margin-top: 7px;
+}
+
+
+/*Demon Slayer*/
+.center {
+  justify-content: center;
+  flex: 0 1 30%;
+  margin-top: 7px;
+}
+
+
+/*Beastars*/
+.right {
+  justify-content: center;
+  flex: 0 1 30%;
+  margin-top: 7px;
+}
+
+
+
+
+/*En dessous de 1127px*/
+@media (max-width: 1127px) {
+.anime{
+  margin: 10px;
+}
+
+}
+
+
+
+/*En dessous de 977px*/
+@media (max-width: 977px) {
+.anime{
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+
+
+.poster {
+  height: 70vh;
+}
+
+
+}
+
+
+/*En dessous de 767px*/
+@media (max-width: 767px) {
+
+.poster {
+  height: 50vh;
+}
+
+
+
+.poster p{
+  font-size: 24px;
+}
+
+}
+
+
+/*En dessous de 672px*/
+@media (max-width: 672px) {
+
+.computer{
+  background: url("http://localhost/mspr/public/img/forums/computer-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.computer h1{
+  font-size: 45px;
+  text-align: center;
+}
+
+
+.poster {
+  display: initial;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+.poster p{
+  font-size: 28px;
+  } 
+
+
+  
+.poster img{
+  width: 50%;
+}
+
+.left, .center, .right{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+}
